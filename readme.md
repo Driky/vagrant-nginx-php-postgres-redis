@@ -1,6 +1,6 @@
-## Vagrant Test
+## Vagrant Shell Provisioner
 
-Testing out a basic shell provisioner for vagrant which installs the following:
+A basic shell provisioner for vagrant which installs the following:
 
 - Ubuntu 14.04 LTS
 - NGINX
