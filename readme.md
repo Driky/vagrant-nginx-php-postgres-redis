@@ -20,4 +20,5 @@ vagrant up
 ### Laravel
 
 This project contains a Laravel 4.1 installation with a few test routes to
-check if everything's installed and working.
+check if everything's installed and working. Check out the vagrant environment
+and config to see database and caching server credentials.
