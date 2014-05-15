@@ -7,6 +7,7 @@ A basic shell provisioner for vagrant which installs the following:
 - PHP 5.5
 - Composer
 - Postgres 9.3
+- SQLite
 - Redis
 
 ### Installation
