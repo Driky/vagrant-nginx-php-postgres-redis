@@ -10,6 +10,7 @@ A basic shell provisioner for vagrant which installs the following:
 - SQLite
 - Redis
 - [linux-dash](https://github.com/afaqurk/linux-dash)
+- [Adminer](http://www.adminer.org/)
 
 ### Installation
 
@@ -32,3 +33,18 @@ a dependency.
 
 [linux-dash](https://github.com/afaqurk/linux-dash) is installed separately and
 runs on port 90, which should be forwarded to 9090.
+
+### Adminer
+
+Adminer is a web interface for managing databases, similar to phpMyAdmin but
+with support for sqlite and postgres. You can access Adminer by browsing to
+localhost:8080/adminer/
+
+The following credentials will grant you access to the default postgres database:
+
+```
+server: 0.0.0.0
+username: root
+password: root
+database: database
+```
