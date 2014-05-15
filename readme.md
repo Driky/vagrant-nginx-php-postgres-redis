@@ -3,17 +3,18 @@
 A basic shell provisioner for vagrant which installs the following:
 
 - Ubuntu 14.04 LTS
-- NGINX
+- NGINX 1.6.0
 - PHP 5.5
-- Composer
 - Postgres 9.3
+- Composer
 - SQLite
 - Redis
+- [linux-dash](https://github.com/afaqurk/linux-dash)
 
 ### Installation
 
 ```bash
-git clone git@github.com:wayneashleyberry/linux.git
+git clone git@github.com:wayneashleyberry/vagrant-nginx-php-postgres-redis.git
 composer install --no-interaction --working-dir source
 vagrant up
 ```
@@ -23,3 +24,8 @@ vagrant up
 This project contains a Laravel 4.1 installation with a few test routes to
 check if everything's installed and working. Check out the vagrant environment
 and config to see database and caching server credentials.
+
+### Linux Dash
+
+[linux-dash](https://github.com/afaqurk/linux-dash) is installed separately and
+runs on port 90, which should be forwarded to 9090.

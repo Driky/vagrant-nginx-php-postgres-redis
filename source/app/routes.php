@@ -26,11 +26,6 @@ Route::get('/xdebug', function()
   var_dump(['foo' => 'bar']);
 });
 
-Route::get('/phpinfo', function()
-{
-  phpinfo();
-});
-
 Route::get('/postgres', function()
 {
   Schema::dropIfExists('users');
@@ -48,6 +43,6 @@ Route::get('/postgres', function()
 Route::get('/redis', function()
 {
   return Cache::remember('test', 5, function () {
-    return Carbon\Carbon::now();
+    return '<pre><span style="color:green;">✔</span> '.Carbon\Carbon::now().'</pre>';
   });
 });

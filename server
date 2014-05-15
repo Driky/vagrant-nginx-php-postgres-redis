@@ -2,6 +2,24 @@
 # vi: set ft=nginx :
 
 server {
+  listen 90;
+
+  root /linux-dash;
+
+  index index.html index.htm;
+
+  location ~ \.php$ {
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    # NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+
+    # With php5-fpm:
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_index index.php;
+    include fastcgi_params;
+  }
+}
+
+server {
   listen 80 default_server;
   listen [::]:80 default_server ipv6only=on;
 

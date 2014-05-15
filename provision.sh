@@ -6,7 +6,7 @@ sudo add-apt-repository -y ppa:rwky/redis
 # base
 sudo apt-key update
 sudo apt-get update
-sudo apt-get install -y vim curl wget sqlite build-essential python-software-properties
+sudo apt-get install -y git vim curl wget sqlite build-essential python-software-properties
 
 # nginx
 sudo apt-get install -y nginx
@@ -26,8 +26,7 @@ composer --version
 
 # nginx config
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo rm -f /etc/nginx/sites-enabled/primedia
-sudo ln -s /vagrant/server /etc/nginx/sites-enabled/primedia
+sudo ln -s /vagrant/server /etc/nginx/sites-enabled/default
 sudo service nginx restart
 
 # redis
@@ -53,3 +52,6 @@ sudo -u postgres psql -c "CREATE ROLE root LOGIN UNENCRYPTED PASSWORD 'root' NOS
 sudo -u postgres psql -c "CREATE DATABASE database"
 
 sudo service postgresql restart
+
+# install linux-dash
+sudo git clone https://github.com/afaqurk/linux-dash.git /linux-dash
